@@ -341,7 +341,11 @@ namespace SeaOfStarsLocalMapInstaller
 
         private static void Report(Action<ProgressInfo> progress, int current, int total, string message)
         {
-            if (progress != null) progress(new ProgressInfo(total == 0 ? 100 : (int)((long)current * 100 / total), message));
+            if (progress == null) return;
+            int percent = total == 0 ? 100 : (int)((long)current * 100 / total);
+            int previousPercent = current <= 1 || total == 0 ? -1 : (int)((long)(current - 1) * 100 / total);
+            if (current == total || percent != previousPercent)
+                progress(new ProgressInfo(percent, message));
         }
 
         public static string HashFile(string path)

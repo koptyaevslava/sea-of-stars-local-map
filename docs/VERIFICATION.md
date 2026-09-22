@@ -9,6 +9,7 @@
 - Every tile path, dimension, atlas position, PNG mode, and SHA-256 checksum was validated.
 - Every map manifest is below 1 MiB and contains fewer than 4,096 tiles.
 - Installer payload selection rejects files associated with other mods.
+- A full installed-file verification completed successfully in 8.51 seconds after progress callbacks were limited to percentage changes.
 
 ## Performance diagnosis
 

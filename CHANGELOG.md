@@ -10,3 +10,4 @@
 - Added discovered campfire and save-point markers using game-style assets.
 - Added localized map controls and native per-language font selection.
 - Updated the standalone installer with strict payload selection and English UI.
+- Limited installer progress callbacks to percentage changes so large install and verify operations do not flood the Windows message queue.
