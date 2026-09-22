@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E376D26C-B2CA-4738-8671-B3D57E5C5852}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalMap", "src\SeaOfStarsLocalMap\LocalMap.csproj", "{D73F67A1-04B3-4C30-B14B-DA67FC44127C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{6D8DCD7E-E013-4AEC-A8EE-9AADB2E5E268}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticMap.Tests", "tests\StaticMap.Tests\StaticMap.Tests.csproj", "{F167F3C3-DBA5-4274-A021-A5AC23598245}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D73F67A1-04B3-4C30-B14B-DA67FC44127C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D73F67A1-04B3-4C30-B14B-DA67FC44127C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D73F67A1-04B3-4C30-B14B-DA67FC44127C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D73F67A1-04B3-4C30-B14B-DA67FC44127C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F167F3C3-DBA5-4274-A021-A5AC23598245}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F167F3C3-DBA5-4274-A021-A5AC23598245}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F167F3C3-DBA5-4274-A021-A5AC23598245}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F167F3C3-DBA5-4274-A021-A5AC23598245}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D73F67A1-04B3-4C30-B14B-DA67FC44127C} = {E376D26C-B2CA-4738-8671-B3D57E5C5852}
+		{F167F3C3-DBA5-4274-A021-A5AC23598245} = {6D8DCD7E-E013-4AEC-A8EE-9AADB2E5E268}
+	EndGlobalSection
+EndGlobal

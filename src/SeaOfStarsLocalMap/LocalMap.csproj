@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>SeaOfStarsLocalMap</AssemblyName>
+    <Version>0.9.3</Version>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <GameDir Condition="'$(GameDir)' == ''">$(SEA_OF_STARS_DIR)</GameDir>
+    <Core>$(GameDir)/BepInEx/core</Core>
+    <Interop>$(GameDir)/BepInEx/interop</Interop>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="StaticMapPlugin.cs" />
+    <Compile Include="StaticFog.cs" />
+    <Compile Include="NativeMapInput.cs" />
+    <Compile Include="NativeMapHud.cs" />
+    <Compile Include="NativeMapAssets.cs" />
+    <Compile Include="MapCanvasView.cs" />
+    <Reference Include="$(Core)/0Harmony.dll" Private="false" />
+    <Reference Include="$(Interop)/Rewired_Core.dll" Private="false" />
+    <Reference Include="$(Interop)/UnityEngine.UIModule.dll" Private="false" />
+    <Reference Include="$(Interop)/UnityEngine.UI.dll" Private="false" />
+    <Reference Include="$(Interop)/Unity.TextMeshPro.dll" Private="false" />
+    <Reference Include="$(Interop)/UnityEngine.AnimationModule.dll" Private="false" />
+    <Reference Include="$(Core)/BepInEx.Core.dll" Private="false" />
+    <Reference Include="$(Core)/BepInEx.Unity.IL2CPP.dll" Private="false" />
+    <Reference Include="$(Core)/Il2CppInterop.Runtime.dll" Private="false" />
+    <Reference Include="$(Interop)/Assembly-CSharp.dll" Private="false" />
+    <Reference Include="$(Interop)/Unity.InternalAPIEngineBridge.021.dll" Private="false" />
+    <Reference Include="$(Interop)/Il2Cppmscorlib.dll" Private="false" />
+    <Reference Include="$(Interop)/Sabotage.Core.dll" Private="false" />
+    <Reference Include="$(Interop)/Sabotage.Localization.dll" Private="false" />
+    <Reference Include="$(Interop)/Sabotage.StateMachine.dll" Private="false" />
+    <Reference Include="$(Interop)/UnityEngine.CoreModule.dll" Private="false" />
+    <Reference Include="$(Interop)/UnityEngine.PhysicsModule.dll" Private="false" />
+    <Reference Include="$(Interop)/UnityEngine.IMGUIModule.dll" Private="false" />
+    <Reference Include="$(Interop)/UnityEngine.InputLegacyModule.dll" Private="false" />
+    <Reference Include="$(Interop)/UnityEngine.TextRenderingModule.dll" Private="false" />
+    <Reference Include="$(Interop)/UnityEngine.ImageConversionModule.dll" Private="false" />
+    <Reference Include="$(Interop)/Unity.RenderPipelines.Core.Runtime.dll" Private="false" />
+    <Reference Include="$(Interop)/Unity.RenderPipelines.Universal.Runtime.dll" Private="false" />
+  </ItemGroup>
+  <Target Name="ValidateGameReferences" BeforeTargets="ResolveReferences">
+    <Error Condition="!Exists('$(Core)/BepInEx.Core.dll')"
+           Text="Set SEA_OF_STARS_DIR or pass /p:GameDir=... to a modded Sea of Stars installation that contains BepInEx interop assemblies." />
+  </Target>
+</Project>
