@@ -16,6 +16,20 @@ The mod uses pre-rendered map geometry with persistent exploration fog. It track
 - 512 px streamed detail tiles with a bounded texture cache
 - Windows installer with package validation, rollback, verification, and removal
 
+## Screenshots
+
+### Circular minimap
+
+![Circular minimap in Songshroom Marsh](docs/screenshots/circular-minimap.png)
+
+### Full map with controller controls
+
+![Full Songshroom Marsh map with controller controls](docs/screenshots/full-map-controller.png)
+
+### Full map with keyboard controls
+
+![Full Songshroom Marsh map with keyboard controls](docs/screenshots/full-map-keyboard.png)
+
 ## Requirements
 
 - Sea of Stars for Windows
