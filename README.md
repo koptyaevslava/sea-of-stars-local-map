@@ -54,4 +54,4 @@ Project documentation, comments, identifiers, logs, and build output are written
 
 ## License
 
-Source code is available under the MIT License. Sea of Stars and its assets are owned by their respective rights holders. Extracted game assets and generated map images are not covered by this repository license and are not stored in this source repository.
+Source code is available under the MIT License. Sea of Stars and its assets are owned by their respective rights holders. 
